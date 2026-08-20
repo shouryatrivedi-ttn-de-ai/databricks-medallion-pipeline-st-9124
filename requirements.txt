@@ -1,2 +1,4 @@
 pandas>=2.0.0
 faker>=22.0.0
+pyspark>=3.5.0
+delta-spark>=3.0.0
