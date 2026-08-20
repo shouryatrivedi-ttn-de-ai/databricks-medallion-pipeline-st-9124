@@ -12,11 +12,11 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
-# Local default: repo / data / ; override on Databricks (e.g. /dbfs/FileStore/medallion/data/)
+# Local default: repo / data / ; override on Databricks via DATA_PATH env var
 DEFAULT_DATA_PATH = str(REPO_ROOT / "data")
 
 DATA_PATH = os.getenv("DATA_PATH", DEFAULT_DATA_PATH)
-BRONZE_SCHEMA = os.getenv("BRONZE_SCHEMA", "bronze")
+BRONZE_SCHEMA = os.getenv("BRONZE_SCHEMA", "workspace.bronze")
 BRONZE_WRITE_MODE = os.getenv("BRONZE_WRITE_MODE", "overwrite")
 
 # Expected row counts from sample data generator (assignment targets)

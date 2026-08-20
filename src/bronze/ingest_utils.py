@@ -48,6 +48,10 @@ def ensure_bronze_schema(spark: SparkSession) -> None:
 
 def resolve_csv_path(entity: str) -> str:
     filename = CSV_FILES[entity]
+
+    if DATA_PATH.startswith("/Volumes/"):
+        return f"{DATA_PATH.rstrip('/')}/{filename}"
+
     path = Path(DATA_PATH) / filename
     if not path.exists():
         raise FileNotFoundError(
