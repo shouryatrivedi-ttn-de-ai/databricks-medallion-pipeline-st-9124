@@ -38,10 +38,12 @@ def apply_uniqueness_checks(entity: str, df: DataFrame) -> tuple[DataFrame, list
     else:
         return df, metrics
 
-    window = Window.partitionBy(key_col)
-    duplicate_condition = count(col(key_col)).over(window) > 1
+    window_spec = Window.partitionBy(key_col)
+    df = df.withColumn("_duplicate_count", count(col(key_col)).over(window_spec))
+    duplicate_condition = col("_duplicate_count") > 1
+
     df = append_failure_code(df, duplicate_condition, failure_code)
     failed_rows = count_failures(df, duplicate_condition)
     metrics.append(metric_for_check(entity, check_name, total_rows, failed_rows))
 
-    return df, metrics
+    return df.drop("_duplicate_count"), metrics
