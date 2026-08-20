@@ -1,0 +1,63 @@
+---
+description: Medallion pipeline project standards for the Databricks e-commerce data engineering exercise
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# Databricks Medallion Pipeline — Project Rules
+
+## Primary Specification
+
+- Treat `docs/requirements.md` as the authoritative assignment specification.
+- Do not invent requirements not stated in the spec; document assumptions explicitly when the spec is silent.
+- Do not modify `docs/requirements.md` unless the user explicitly requests it.
+- When the spec is ambiguous or internally inconsistent, **ask for clarification** rather than silently choosing behavior. Record known ambiguities in `requirements-analysis.md`.
+
+## Architecture
+
+- Follow **Bronze → Silver → Gold → Dashboard** Medallion Architecture.
+- **Bronze:** ingest raw CSV data unchanged; log ingestion metadata (row counts, timestamps).
+- **Silver:** apply data quality checks; **flag invalid records—never silently delete them**.
+- **Gold:** build business aggregations from validated Silver data.
+- **Dashboard:** SQL queries and visualization guidance for Databricks SQL Dashboard.
+
+## Code Standards
+
+- Use readable, modular, maintainable **Python**, **PySpark**, and **SQL**.
+- Prefer **explicit schemas** over unchecked inference for Silver and Gold layers.
+- Match the prescribed repository structure under `src/`, `data/`, `database/`, etc.
+- Write **testable** code with meaningful data quality and/or pipeline tests.
+- **Never hardcode secrets or credentials**; parameterize paths and use environment/config patterns.
+- Avoid modifying unrelated files; keep changes scoped to the task at hand.
+- Explain assumptions and trade-offs in design docs or code comments where non-obvious.
+
+## Data Quality
+
+- Implement core checks: **Completeness**, **Uniqueness**, **Referential Integrity**, plus quality reporting.
+- Repository also lists `type_validation` and `business_logic` modules—implement as extensions and document how they relate to the "four checks" acceptance criteria.
+- Add `quality_check_result` (and failure reason detail) to Silver outputs.
+- Generate a quality metrics report with **% passed per check**.
+- Sample data must include intentional issues per spec (~700 problematic rows).
+
+## Gold & Dashboard
+
+- Produce three core Gold aggregations: Sales by Product, Revenue by Customer, Customer Segmentation.
+- `03_daily_weekly_trends.sql` is optional/stretch unless user clarifies otherwise.
+- Dashboard: 3+ tiles—Top 10 products (bar), Customer revenue distribution (histogram), Customer segmentation (pie).
+
+## Validation & Completion
+
+- Validate generated code (run tests, smoke-check row counts, verify quality checks catch intentional defects) before considering a task complete.
+- README setup instructions must support end-to-end execution on Databricks Community Edition.
+- Maintain lifecycle artifacts: prompt history, debugging notes, reflection—do not skip documentation.
+
+## AI Workflow
+
+- Capture prompt history in `ai-prompts/` organized by activity.
+- Show iteration: what was accepted, changed, or rejected and why.
+- Do not share real PII or production credentials with AI tools.
+
+## When Uncertain
+
+- Prefer asking the user over guessing on: segmentation business rules, `lifetime_value_actual` definition, whether optional Silver/Gold modules are in scope, and Gold inclusion rules for failed/cancelled orders.

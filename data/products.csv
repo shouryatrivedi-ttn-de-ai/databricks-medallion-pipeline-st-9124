@@ -1,0 +1,501 @@
+product_id,product_name,category,price,cost,stock_quantity,reorder_level
+1,Sharable bifurcated algorithm,Books,321.52,99.67,125,38
+2,User-centric even-keeled encryption,Clothing,74.07,25.26,302,64
+3,Face-to-face client-driven support,Sports,20.73,7.00,258,87
+4,Customer-focused systematic support,Toys,18.14,6.88,112,67
+5,Quality-focused background parallelism,Electronics,296.69,185.07,388,30
+6,Optimized 5thgeneration algorithm,Home,350.58,152.89,110,53
+7,Cross-group didactic emulation,Beauty,55.59,25.13,433,54
+8,Profit-focused real-time algorithm,Automotive,303.84,189.25,274,25
+9,Realigned dedicated structure,Books,486.69,219.70,424,90
+10,Streamlined tangible moratorium,Sports,311.17,200.61,360,18
+11,Operative directional knowledge user,Books,27.68,10.83,40,39
+12,Reverse-engineered even-keeled workforce,Automotive,433.91,196.15,325,56
+13,Adaptive well-modulated workforce,Books,85.51,37.80,359,97
+14,Diverse tangible interface,Home,325.78,177.11,273,41
+15,Mandatory even-keeled collaboration,Sports,85.88,38.80,350,51
+16,Extended well-modulated Graphical User Interface,Sports,422.21,257.72,420,14
+17,Customer-focused background implementation,Clothing,403.50,185.80,108,82
+18,Cross-platform heuristic hardware,Automotive,438.80,186.87,202,92
+19,Robust empowering workforce,Sports,232.13,94.23,381,81
+20,Balanced upward-trending knowledgebase,Toys,271.79,162.75,459,84
+21,Public-key bottom-line implementation,Home,202.70,78.59,260,73
+22,Configurable neutral frame,Clothing,50.00,15.94,78,90
+23,Self-enabling regional hierarchy,Clothing,84.19,48.17,197,58
+24,Re-engineered content-based strategy,Books,299.96,146.15,497,80
+25,Cloned 6thgeneration protocol,Clothing,431.09,131.31,349,78
+26,Focused zero administration frame,Beauty,376.68,228.81,57,47
+27,Configurable discrete attitude,Books,220.21,106.03,497,74
+28,Multi-tiered even-keeled knowledgebase,Clothing,382.17,192.26,445,90
+29,Sharable high-level complexity,Sports,152.73,84.85,78,57
+30,Multi-layered heuristic database,Electronics,382.44,197.24,306,51
+31,Synchronized encompassing standardization,Beauty,246.86,85.10,449,49
+32,Synergized secondary archive,Clothing,123.53,48.96,43,72
+33,Robust scalable concept,Home,408.93,282.65,65,94
+34,Public-key upward-trending encryption,Books,240.26,124.92,270,87
+35,Diverse maximized implementation,Sports,214.45,82.50,365,49
+36,Future-proofed scalable solution,Beauty,202.50,115.16,224,76
+37,Realigned directional software,Clothing,228.49,91.20,173,12
+38,Inverse zero administration time-frame,Sports,296.21,116.13,3,19
+39,Centralized discrete alliance,Clothing,355.38,114.98,463,14
+40,Intuitive impactful flexibility,Sports,430.52,141.36,142,95
+41,Cloned didactic open system,Automotive,245.28,126.49,124,70
+42,Universal foreground data-warehouse,Clothing,404.71,152.24,337,65
+43,Streamlined modular infrastructure,Electronics,180.38,83.78,344,93
+44,Stand-alone logistical circuit,Toys,492.16,167.02,372,53
+45,Fundamental client-driven encryption,Sports,401.29,137.93,97,78
+46,User-friendly next generation monitoring,Books,227.06,106.43,236,41
+47,Fundamental value-added paradigm,Clothing,437.87,144.56,25,93
+48,Optimized optimal initiative,Clothing,499.64,316.98,474,40
+49,Multi-lateral directional challenge,Sports,87.32,43.16,442,61
+50,Profound modular array,Electronics,451.71,165.26,199,43
+51,Versatile actuating budgetary management,Books,463.63,284.69,216,99
+52,Distributed responsive complexity,Automotive,478.87,334.33,79,34
+53,Synergized interactive policy,Electronics,151.87,104.41,382,50
+54,Cloned human-resource implementation,Home,33.30,17.77,29,75
+55,Right-sized maximized moderator,Clothing,44.66,16.72,345,40
+56,Function-based neutral access,Sports,204.87,138.62,296,86
+57,Synergized uniform budgetary management,Beauty,24.67,8.21,478,43
+58,Synergized national system engine,Sports,106.11,62.23,135,60
+59,Future-proofed zero administration project,Automotive,69.78,38.95,161,19
+60,Mandatory bifurcated frame,Clothing,9.61,5.27,37,78
+61,Optional cohesive knowledgebase,Beauty,110.51,44.88,451,18
+62,Adaptive uniform success,Home,440.24,197.14,224,79
+63,Fundamental motivating task-force,Electronics,353.25,192.41,341,80
+64,Enhanced motivating benchmark,Home,153.19,86.61,135,24
+65,Self-enabling exuding productivity,Home,445.41,265.89,139,46
+66,Profit-focused real-time customer loyalty,Sports,304.39,178.69,351,91
+67,Distributed holistic task-force,Books,427.19,214.52,463,16
+68,Diverse needs-based time-frame,Books,50.69,23.80,22,10
+69,Progressive 24hour policy,Books,170.11,59.93,82,66
+70,Inverse mobile adapter,Electronics,278.08,131.00,57,19
+71,Customizable high-level workforce,Home,472.80,272.53,279,14
+72,Integrated disintermediate approach,Home,418.12,222.86,220,26
+73,Front-line non-volatile artificial intelligence,Electronics,25.71,11.46,460,55
+74,Configurable upward-trending matrix,Clothing,108.99,43.58,181,81
+75,Cloned well-modulated monitoring,Home,442.65,204.75,473,40
+76,Visionary clear-thinking capacity,Home,432.98,298.97,451,62
+77,Switchable methodical neural-net,Beauty,17.27,10.27,400,62
+78,Down-sized empowering moderator,Sports,402.11,259.61,136,30
+79,Robust interactive data-warehouse,Electronics,394.75,135.49,439,70
+80,Quality-focused web-enabled superstructure,Automotive,115.10,72.13,179,49
+81,Team-oriented dedicated structure,Sports,411.17,266.66,12,94
+82,Integrated impactful secured line,Clothing,100.60,43.39,495,45
+83,Streamlined holistic intranet,Beauty,178.82,90.08,480,13
+84,Programmable local capability,Home,62.09,42.73,297,43
+85,Fully-configurable directional architecture,Beauty,23.94,12.89,373,50
+86,Mandatory 3rdgeneration parallelism,Clothing,221.01,153.31,197,83
+87,Reactive discrete parallelism,Toys,99.09,31.49,0,76
+88,Face-to-face 24hour archive,Sports,463.16,238.70,186,65
+89,Triple-buffered responsive approach,Beauty,39.64,22.42,319,50
+90,Focused asymmetric alliance,Books,333.38,116.63,259,49
+91,Managed asynchronous migration,Books,335.11,144.26,283,26
+92,Front-line even-keeled secured line,Toys,99.96,56.57,346,32
+93,Pre-emptive didactic moratorium,Electronics,309.68,130.18,155,46
+94,De-engineered uniform orchestration,Beauty,109.04,66.98,238,66
+95,Re-engineered methodical encryption,Automotive,223.87,86.30,406,31
+96,Phased incremental core,Beauty,331.13,136.93,47,40
+97,Cross-platform bandwidth-monitored protocol,Sports,338.03,131.78,75,13
+98,Optional heuristic interface,Clothing,27.88,19.34,233,63
+99,Open-source maximized superstructure,Toys,443.64,235.25,253,61
+100,Business-focused systematic projection,Electronics,125.77,70.74,457,23
+101,Stand-alone bandwidth-monitored approach,Automotive,390.32,151.26,25,81
+102,Open-architected upward-trending Graphical User Interface,Automotive,128.35,82.06,68,69
+103,Customer-focused dynamic core,Beauty,335.45,233.19,486,66
+104,Ergonomic national knowledge user,Toys,308.26,181.17,425,80
+105,Devolved interactive contingency,Automotive,225.73,82.09,230,43
+106,Grass-roots maximized encryption,Books,377.13,239.83,392,76
+107,Compatible leadingedge workforce,Automotive,244.88,96.90,39,46
+108,Reactive bandwidth-monitored application,Clothing,121.07,52.59,70,29
+109,Streamlined needs-based access,Sports,119.47,69.00,32,63
+110,Cross-group web-enabled encoding,Toys,206.76,106.90,31,36
+111,Down-sized incremental matrix,Electronics,417.28,190.19,438,83
+112,Polarized didactic initiative,Beauty,193.29,58.44,152,59
+113,Centralized composite implementation,Toys,427.46,291.26,275,79
+114,Adaptive human-resource firmware,Automotive,400.93,264.26,112,44
+115,Persevering executive interface,Beauty,220.74,68.78,342,96
+116,Total upward-trending toolset,Automotive,400.08,235.92,470,26
+117,Realigned stable structure,Toys,490.46,251.92,303,82
+118,Pre-emptive coherent core,Toys,333.18,111.14,69,69
+119,Implemented didactic approach,Beauty,94.96,38.37,108,68
+120,Reduced user-facing moratorium,Toys,166.79,100.82,142,63
+121,Centralized value-added functionalities,Electronics,129.87,43.22,383,79
+122,Centralized actuating paradigm,Sports,30.78,20.95,332,18
+123,Polarized motivating moderator,Electronics,391.71,219.63,486,41
+124,Diverse analyzing migration,Home,103.68,31.95,122,26
+125,Configurable contextually-based architecture,Sports,239.41,82.78,238,99
+126,Right-sized asymmetric service-desk,Clothing,131.84,59.01,398,30
+127,Front-line impactful capability,Electronics,482.54,165.63,475,49
+128,Re-contextualized dynamic paradigm,Toys,290.02,192.34,203,35
+129,Right-sized 6thgeneration process improvement,Sports,42.62,24.56,52,99
+130,Configurable intangible protocol,Clothing,387.38,247.97,407,82
+131,Reduced non-volatile model,Toys,392.40,172.22,338,57
+132,Intuitive empowering database,Electronics,39.13,21.87,434,63
+133,Synchronized transitional functionalities,Beauty,412.05,141.01,325,68
+134,Front-line empowering infrastructure,Books,355.12,168.40,315,78
+135,De-engineered static project,Books,388.45,188.77,165,41
+136,Innovative logistical functionalities,Automotive,416.21,139.29,124,69
+137,Versatile asynchronous access,Beauty,287.08,162.85,14,73
+138,Persevering regional open system,Sports,426.22,158.87,181,43
+139,Cross-platform asynchronous monitoring,Books,173.47,113.12,284,11
+140,Extended motivating firmware,Sports,260.73,98.14,368,62
+141,De-engineered grid-enabled architecture,Automotive,246.85,148.92,330,72
+142,Fully-configurable holistic forecast,Books,226.85,69.62,113,61
+143,Diverse leadingedge moratorium,Beauty,347.43,146.78,242,80
+144,Triple-buffered exuding pricing structure,Beauty,267.81,125.92,180,99
+145,Streamlined multi-tasking access,Sports,229.60,97.04,61,34
+146,Synchronized neutral framework,Home,161.20,96.26,98,37
+147,Switchable bi-directional challenge,Books,370.61,152.17,51,34
+148,Fundamental bifurcated benchmark,Books,151.64,67.38,7,100
+149,User-friendly neutral collaboration,Electronics,269.40,110.38,283,47
+150,Future-proofed executive portal,Automotive,350.22,122.76,52,11
+151,Expanded transitional Graphical User Interface,Automotive,289.16,141.04,174,33
+152,Expanded systemic productivity,Automotive,482.92,193.65,58,18
+153,Fundamental motivating matrix,Electronics,203.35,67.03,77,29
+154,Function-based actuating array,Clothing,406.52,276.29,127,25
+155,Sharable interactive focus group,Sports,281.25,131.19,397,76
+156,Balanced 24hour groupware,Books,193.29,128.23,440,85
+157,Visionary clear-thinking productivity,Electronics,495.07,208.99,312,22
+158,Fundamental cohesive support,Sports,474.06,181.62,135,94
+159,Organic neutral strategy,Clothing,45.19,17.89,80,10
+160,Optimized next generation access,Automotive,207.22,119.31,149,14
+161,Customizable asynchronous solution,Automotive,119.58,69.69,36,97
+162,Distributed needs-based alliance,Sports,120.54,48.92,217,24
+163,Multi-layered optimal neural-net,Books,274.56,153.49,423,28
+164,Digitized intermediate capacity,Books,40.35,14.78,304,82
+165,Balanced fault-tolerant hierarchy,Automotive,460.99,219.28,352,48
+166,Balanced heuristic database,Automotive,351.37,237.90,224,20
+167,Synergized dynamic secured line,Beauty,301.03,197.41,309,42
+168,Customer-focused heuristic time-frame,Electronics,17.80,6.97,391,96
+169,Realigned incremental process improvement,Home,411.60,218.35,240,76
+170,User-friendly coherent encoding,Home,327.50,218.26,299,65
+171,Diverse context-sensitive installation,Clothing,319.22,158.55,240,54
+172,Assimilated context-sensitive support,Clothing,207.13,88.74,439,30
+173,Managed zero tolerance installation,Books,168.25,97.16,339,61
+174,Synchronized user-facing workforce,Automotive,407.72,212.03,45,50
+175,Fully-configurable encompassing complexity,Toys,129.94,45.01,442,75
+176,Total bi-directional implementation,Automotive,413.34,124.19,211,16
+177,Automated methodical definition,Automotive,97.85,43.52,320,66
+178,Exclusive logistical hardware,Home,381.20,145.40,474,46
+179,Integrated discrete definition,Clothing,221.87,128.53,14,90
+180,Assimilated stable core,Home,306.39,121.24,159,80
+181,Open-architected full-range focus group,Sports,11.77,5.45,430,24
+182,Cloned zero administration focus group,Home,233.42,80.99,255,47
+183,Monitored secondary migration,Automotive,256.89,105.16,241,41
+184,Open-architected systematic monitoring,Sports,231.11,82.70,471,86
+185,Managed 4thgeneration budgetary management,Clothing,256.58,167.22,141,63
+186,Fundamental context-sensitive paradigm,Books,173.24,106.56,420,10
+187,Fundamental 5thgeneration benchmark,Automotive,145.01,60.82,443,29
+188,Right-sized intermediate hardware,Beauty,226.04,111.60,282,79
+189,Upgradable zero tolerance functionalities,Sports,191.72,129.05,357,40
+190,Optional real-time migration,Toys,288.04,113.32,22,50
+191,Customizable human-resource orchestration,Toys,373.63,217.49,197,94
+192,Ergonomic eco-centric analyzer,Home,397.23,222.77,253,14
+193,Triple-buffered intermediate ability,Beauty,67.49,46.31,445,22
+194,Programmable national software,Automotive,437.72,208.41,7,28
+195,Up-sized user-facing support,Home,207.94,116.84,38,70
+196,Synchronized dedicated hierarchy,Toys,391.86,159.10,332,20
+197,Optional asymmetric secured line,Toys,426.62,273.44,488,50
+198,Managed regional functionalities,Automotive,315.27,206.49,446,79
+199,Switchable bottom-line success,Books,22.77,7.45,116,21
+200,Innovative motivating function,Clothing,219.82,74.60,227,31
+201,Synchronized incremental Graphic Interface,Electronics,348.53,230.51,166,17
+202,Open-architected tangible frame,Home,150.22,67.59,125,77
+203,Reactive clear-thinking core,Home,208.97,119.68,87,32
+204,Operative static implementation,Sports,44.09,28.59,254,84
+205,Synergistic value-added conglomeration,Books,75.84,36.74,235,42
+206,Seamless non-volatile framework,Automotive,335.09,221.01,461,46
+207,Open-architected neutral ability,Automotive,340.42,123.64,483,54
+208,Innovative executive database,Toys,493.89,207.27,353,42
+209,Optional zero tolerance paradigm,Toys,231.13,97.27,436,71
+210,Robust solution-oriented Graphic Interface,Beauty,57.79,26.15,294,47
+211,Persistent leadingedge intranet,Toys,496.38,207.53,140,11
+212,Synergistic didactic migration,Electronics,285.13,163.76,466,87
+213,Phased user-facing concept,Books,373.86,236.70,397,39
+214,Switchable attitude-oriented forecast,Sports,305.50,134.70,317,42
+215,Profound stable productivity,Home,340.49,200.33,321,22
+216,Secured full-range array,Books,452.18,252.56,403,66
+217,Versatile disintermediate service-desk,Home,21.52,9.60,46,47
+218,Integrated directional workforce,Sports,166.73,77.73,67,79
+219,Exclusive client-server algorithm,Books,438.85,195.88,425,31
+220,Balanced dynamic leverage,Automotive,132.20,83.27,495,47
+221,Seamless zero administration archive,Clothing,374.55,163.11,239,19
+222,Persevering intangible product,Toys,74.67,51.27,495,81
+223,Re-engineered content-based structure,Electronics,186.06,114.66,135,78
+224,Total human-resource methodology,Books,66.18,29.61,299,58
+225,Open-architected dynamic circuit,Clothing,412.10,278.63,345,39
+226,Streamlined system-worthy ability,Beauty,238.38,130.59,468,88
+227,Versatile zero administration benchmark,Automotive,114.58,37.27,465,99
+228,Vision-oriented interactive definition,Home,154.58,71.62,23,14
+229,Enhanced tangible model,Clothing,155.66,77.37,120,78
+230,Persistent actuating open architecture,Toys,72.15,34.74,300,29
+231,Fully-configurable bottom-line knowledgebase,Automotive,443.28,249.11,315,62
+232,Devolved maximized secured line,Beauty,469.83,193.52,111,66
+233,Progressive next generation policy,Beauty,225.12,88.80,50,97
+234,Intuitive web-enabled intranet,Beauty,186.83,123.43,31,60
+235,Seamless uniform middleware,Automotive,141.56,97.29,46,94
+236,Optimized neutral knowledge user,Electronics,109.99,61.13,25,52
+237,Diverse value-added leverage,Sports,125.57,44.00,35,80
+238,Organized empowering system engine,Sports,107.54,41.55,168,28
+239,Fully-configurable scalable focus group,Books,395.38,212.87,439,28
+240,Visionary zero-defect model,Home,493.83,254.86,56,94
+241,Pre-emptive responsive encoding,Beauty,433.89,153.04,404,40
+242,Grass-roots leadingedge archive,Books,296.48,90.82,26,26
+243,Universal executive encoding,Clothing,372.15,189.96,243,67
+244,Future-proofed full-range functionalities,Clothing,390.12,197.13,231,74
+245,Quality-focused attitude-oriented challenge,Books,114.67,62.61,234,92
+246,Distributed discrete info-mediaries,Automotive,482.19,156.39,433,61
+247,Team-oriented coherent strategy,Automotive,216.01,74.13,37,20
+248,Extended asymmetric instruction set,Home,164.45,59.09,140,89
+249,Open-source full-range moratorium,Beauty,318.37,165.34,195,86
+250,Persistent intangible approach,Toys,267.63,128.86,50,99
+251,Expanded intangible info-mediaries,Sports,61.63,34.63,220,67
+252,Visionary optimal standardization,Automotive,444.61,206.98,204,63
+253,Ameliorated well-modulated orchestration,Beauty,366.16,155.63,340,42
+254,Multi-tiered mission-critical ability,Automotive,190.28,68.70,34,21
+255,Multi-channeled exuding system engine,Clothing,416.73,140.56,381,57
+256,Networked intangible monitoring,Beauty,406.83,212.59,343,25
+257,User-friendly user-facing moratorium,Toys,208.35,135.31,444,16
+258,Robust directional matrix,Beauty,484.36,261.63,53,83
+259,Face-to-face encompassing Internet solution,Automotive,256.17,92.71,114,23
+260,Pre-emptive 4thgeneration info-mediaries,Clothing,178.31,93.17,390,45
+261,Mandatory static service-desk,Electronics,289.18,180.13,311,94
+262,Open-architected uniform concept,Home,415.58,169.13,139,99
+263,Persistent clear-thinking process improvement,Beauty,382.39,255.67,3,33
+264,Public-key 4thgeneration infrastructure,Toys,435.58,229.35,35,28
+265,Reverse-engineered non-volatile protocol,Clothing,371.78,256.05,382,77
+266,Assimilated attitude-oriented project,Beauty,111.49,52.17,80,57
+267,Optimized client-driven Local Area Network,Clothing,159.26,68.44,452,16
+268,Enterprise-wide actuating firmware,Electronics,82.01,49.35,345,20
+269,Multi-tiered fresh-thinking data-warehouse,Automotive,139.69,78.89,310,66
+270,Persevering fresh-thinking Graphical User Interface,Clothing,210.02,81.12,176,65
+271,Virtual homogeneous focus group,Automotive,59.89,34.21,269,95
+272,Versatile intangible extranet,Electronics,157.67,61.21,3,36
+273,Configurable methodical adapter,Home,154.20,59.29,391,42
+274,User-friendly needs-based application,Automotive,148.28,51.60,382,65
+275,Monitored directional projection,Sports,91.97,41.58,256,81
+276,Cloned zero-defect projection,Clothing,417.51,259.89,203,15
+277,Balanced web-enabled algorithm,Clothing,220.93,106.91,441,50
+278,Fully-configurable dedicated adapter,Toys,290.00,153.51,148,24
+279,Secured coherent encoding,Home,205.49,141.06,410,89
+280,De-engineered methodical secured line,Beauty,232.75,134.03,45,65
+281,Customizable non-volatile data-warehouse,Toys,423.02,168.08,268,20
+282,Persistent tangible extranet,Beauty,200.90,85.20,113,52
+283,Visionary holistic concept,Clothing,390.66,129.13,271,75
+284,Robust real-time synergy,Beauty,100.98,61.65,372,92
+285,Universal bifurcated time-frame,Home,408.44,161.13,131,35
+286,Diverse fault-tolerant benchmark,Clothing,90.88,32.82,90,90
+287,Reduced 4thgeneration function,Automotive,249.59,150.20,348,82
+288,Re-engineered systematic implementation,Beauty,323.28,224.55,442,90
+289,Object-based transitional customer loyalty,Automotive,161.49,76.85,226,90
+290,Compatible optimizing solution,Electronics,154.90,63.49,180,74
+291,Self-enabling dynamic benchmark,Electronics,41.72,20.22,29,57
+292,Total zero administration framework,Clothing,416.69,137.80,314,86
+293,Synergized radical workforce,Electronics,256.00,124.18,230,83
+294,Decentralized non-volatile toolset,Automotive,327.66,140.44,256,29
+295,Balanced grid-enabled monitoring,Beauty,479.07,230.05,365,20
+296,Optimized stable hub,Sports,254.75,94.01,362,66
+297,Cloned motivating project,Home,495.54,252.54,186,57
+298,Mandatory 24/7 instruction set,Beauty,459.38,209.00,347,86
+299,Pre-emptive bi-directional Internet solution,Beauty,30.92,17.08,33,52
+300,Multi-lateral scalable knowledgebase,Books,51.78,29.58,129,94
+301,Triple-buffered coherent Internet solution,Home,482.38,261.01,170,20
+302,Enhanced upward-trending model,Beauty,293.46,104.64,158,93
+303,Streamlined encompassing pricing structure,Clothing,350.75,160.22,158,81
+304,Public-key zero-defect matrices,Home,191.46,118.07,343,99
+305,Persistent intermediate superstructure,Clothing,415.33,247.33,330,95
+306,Reverse-engineered encompassing Graphic Interface,Beauty,214.59,95.43,158,33
+307,Fully-configurable background focus group,Automotive,475.83,207.79,98,38
+308,Organized dynamic system engine,Books,499.99,180.99,432,22
+309,Persistent non-volatile pricing structure,Electronics,256.31,132.23,338,53
+310,Synchronized homogeneous Graphical User Interface,Toys,438.81,240.12,78,30
+311,Assimilated modular Graphic Interface,Home,94.52,54.55,369,66
+312,Enterprise-wide mobile data-warehouse,Sports,26.63,11.87,496,66
+313,Multi-channeled empowering Graphical User Interface,Automotive,307.24,184.64,119,78
+314,Grass-roots radical standardization,Automotive,123.39,84.67,462,34
+315,Grass-roots next generation access,Automotive,187.08,127.00,236,46
+316,Programmable content-based artificial intelligence,Toys,390.17,195.54,494,30
+317,Front-line uniform installation,Home,409.36,254.01,446,42
+318,Pre-emptive next generation task-force,Beauty,30.83,15.18,283,23
+319,Front-line system-worthy leverage,Clothing,357.14,180.84,145,20
+320,Stand-alone transitional matrix,Home,382.74,156.59,425,65
+321,Organized 3rdgeneration array,Automotive,50.40,33.48,452,54
+322,Implemented directional initiative,Toys,465.58,216.94,257,57
+323,Team-oriented dynamic function,Beauty,121.71,84.93,114,13
+324,Switchable optimal hub,Beauty,162.75,55.28,405,28
+325,Phased neutral moderator,Automotive,73.11,30.32,356,27
+326,Monitored interactive synergy,Electronics,380.63,185.61,463,20
+327,Reactive full-range help-desk,Home,14.41,5.57,280,87
+328,Total logistical flexibility,Books,266.25,91.72,121,48
+329,Integrated eco-centric emulation,Automotive,65.31,25.82,32,24
+330,Decentralized uniform core,Electronics,419.16,209.55,323,75
+331,Intuitive bottom-line synergy,Books,289.65,170.15,219,10
+332,Public-key well-modulated solution,Toys,309.33,122.56,95,95
+333,Enterprise-wide content-based data-warehouse,Beauty,335.77,171.04,34,77
+334,User-centric mission-critical focus group,Electronics,274.32,168.59,199,70
+335,Up-sized optimizing task-force,Beauty,26.55,12.07,129,12
+336,Progressive radical forecast,Sports,181.76,59.44,375,94
+337,Cross-platform content-based frame,Beauty,315.99,192.31,68,15
+338,Focused high-level conglomeration,Home,179.39,78.11,425,97
+339,Innovative 24/7 strategy,Home,234.99,135.86,415,27
+340,Public-key clear-thinking focus group,Automotive,36.23,22.12,18,47
+341,Balanced actuating neural-net,Electronics,104.79,64.60,161,49
+342,Implemented tangible capacity,Automotive,260.11,180.95,129,14
+343,Sharable web-enabled matrix,Beauty,377.88,142.25,441,16
+344,Customer-focused 24/7 orchestration,Clothing,433.57,187.64,409,57
+345,Horizontal methodical matrices,Automotive,221.29,101.80,458,59
+346,Organic global contingency,Automotive,172.82,64.76,188,76
+347,Business-focused eco-centric matrices,Toys,137.03,45.64,40,65
+348,Customizable asymmetric initiative,Books,303.21,190.70,164,23
+349,Pre-emptive asynchronous orchestration,Books,44.63,25.19,228,87
+350,Self-enabling systemic application,Automotive,360.24,132.08,179,67
+351,Distributed coherent workforce,Beauty,25.97,16.83,314,65
+352,Re-contextualized exuding artificial intelligence,Electronics,140.90,97.50,38,95
+353,Fully-configurable bottom-line open architecture,Home,320.57,142.76,487,13
+354,Virtual intangible portal,Automotive,75.68,41.10,17,26
+355,Right-sized regional definition,Beauty,38.28,23.40,185,59
+356,Vision-oriented multi-state implementation,Home,474.99,148.65,347,67
+357,Organized leadingedge framework,Clothing,474.67,213.03,293,27
+358,Reverse-engineered interactive function,Books,267.08,122.65,127,24
+359,Re-contextualized regional approach,Toys,17.83,6.68,467,81
+360,Seamless user-facing attitude,Automotive,63.29,38.61,109,88
+361,Virtual demand-driven product,Automotive,146.36,97.56,102,25
+362,Extended empowering protocol,Home,72.19,23.80,460,66
+363,Configurable cohesive encoding,Beauty,498.64,311.25,341,54
+364,Enhanced neutral archive,Books,356.22,185.23,456,48
+365,Diverse 24hour installation,Home,426.42,249.34,406,56
+366,Organized system-worthy policy,Sports,256.83,89.52,405,27
+367,Phased explicit alliance,Beauty,122.18,60.80,283,83
+368,Focused executive strategy,Home,187.61,116.59,313,21
+369,Horizontal tangible knowledgebase,Automotive,37.55,17.25,269,62
+370,Compatible systemic emulation,Clothing,385.74,242.76,64,50
+371,Fundamental zero tolerance utilization,Beauty,322.96,155.02,65,80
+372,Self-enabling optimizing protocol,Home,321.70,119.93,221,74
+373,Exclusive interactive budgetary management,Clothing,455.80,146.84,265,29
+374,Quality-focused directional project,Sports,155.54,56.74,177,76
+375,Distributed encompassing circuit,Books,447.99,285.98,100,91
+376,Compatible analyzing concept,Books,478.39,196.03,314,78
+377,Integrated radical synergy,Home,51.25,28.52,87,94
+378,Re-contextualized executive intranet,Beauty,314.12,207.57,431,82
+379,Decentralized maximized solution,Clothing,25.39,16.39,23,92
+380,Innovative tangible initiative,Sports,386.66,156.93,392,83
+381,Future-proofed motivating moratorium,Automotive,211.21,117.35,455,90
+382,Proactive leadingedge artificial intelligence,Books,275.06,153.14,247,41
+383,Right-sized 6thgeneration Internet solution,Books,403.32,231.50,232,19
+384,User-centric fresh-thinking portal,Toys,345.86,125.63,247,69
+385,Function-based 4thgeneration array,Beauty,105.99,57.52,441,50
+386,Focused systematic orchestration,Toys,368.43,237.38,66,57
+387,Reverse-engineered 3rdgeneration task-force,Sports,259.92,89.02,238,25
+388,Synergistic encompassing orchestration,Clothing,137.40,54.85,25,47
+389,Balanced well-modulated system engine,Toys,472.97,305.38,127,30
+390,Enhanced methodical model,Beauty,407.67,274.57,97,30
+391,Streamlined leadingedge focus group,Automotive,251.64,127.30,450,49
+392,Enterprise-wide optimal Internet solution,Toys,251.20,84.41,258,68
+393,Sharable mobile array,Beauty,483.51,186.66,24,16
+394,Phased grid-enabled installation,Automotive,144.27,77.76,146,78
+395,Managed fresh-thinking secured line,Home,9.05,3.10,451,43
+396,Customer-focused cohesive groupware,Beauty,365.12,221.10,23,61
+397,Open-source system-worthy methodology,Beauty,30.32,15.91,283,46
+398,Horizontal stable initiative,Books,41.40,20.77,422,89
+399,Virtual neutral alliance,Clothing,341.80,118.78,201,57
+400,Persevering background functionalities,Beauty,398.47,173.59,386,28
+401,Function-based fresh-thinking budgetary management,Electronics,103.53,52.14,23,14
+402,Visionary impactful migration,Automotive,72.83,31.55,265,68
+403,Adaptive stable moratorium,Home,78.73,51.75,167,88
+404,Persistent incremental application,Books,162.67,74.37,303,53
+405,Ergonomic multi-state hierarchy,Automotive,256.12,129.06,362,82
+406,Secured web-enabled methodology,Beauty,153.40,96.07,169,96
+407,Self-enabling leadingedge task-force,Books,59.25,27.65,407,98
+408,Business-focused demand-driven flexibility,Books,316.48,170.51,495,93
+409,Reactive clear-thinking forecast,Sports,392.54,239.63,369,16
+410,Organic tangible matrix,Toys,293.84,108.19,75,97
+411,Decentralized 4thgeneration product,Clothing,124.89,66.07,97,12
+412,Robust disintermediate strategy,Toys,223.31,104.40,353,36
+413,Diverse fault-tolerant neural-net,Automotive,208.14,126.96,446,17
+414,Advanced neutral installation,Beauty,354.36,179.83,339,71
+415,Cross-group directional budgetary management,Home,265.11,112.80,235,78
+416,Persistent bottom-line project,Books,174.45,77.06,312,71
+417,Distributed modular structure,Books,100.17,39.93,115,48
+418,Implemented multimedia strategy,Automotive,386.73,225.06,162,71
+419,Future-proofed intangible matrices,Books,177.66,119.65,147,25
+420,Phased dynamic knowledgebase,Toys,288.87,149.43,419,54
+421,Reactive client-server info-mediaries,Books,477.53,296.95,21,46
+422,Ergonomic radical migration,Automotive,477.88,158.47,335,42
+423,User-friendly client-driven architecture,Books,374.93,144.57,477,81
+424,Grass-roots zero administration utilization,Sports,349.60,124.08,124,16
+425,Operative global toolset,Sports,336.57,172.46,26,22
+426,Profit-focused encompassing ability,Clothing,209.58,123.01,348,27
+427,Horizontal uniform framework,Home,7.56,3.93,208,93
+428,Reverse-engineered optimal protocol,Automotive,467.84,304.73,333,35
+429,Pre-emptive coherent knowledge user,Books,379.18,157.32,330,17
+430,Public-key mission-critical hardware,Sports,454.43,152.59,273,14
+431,Managed neutral task-force,Home,457.05,169.12,478,14
+432,Quality-focused homogeneous knowledgebase,Automotive,498.60,228.76,95,47
+433,Inverse content-based standardization,Clothing,438.99,133.32,475,52
+434,Front-line object-oriented info-mediaries,Automotive,145.86,101.47,455,27
+435,Focused zero-defect installation,Sports,426.27,207.68,414,24
+436,Balanced foreground synergy,Books,168.69,99.94,367,33
+437,Phased tertiary workforce,Books,11.97,5.21,290,96
+438,Multi-tiered human-resource protocol,Toys,379.85,140.62,423,64
+439,Streamlined coherent methodology,Clothing,260.06,87.04,94,27
+440,Automated clear-thinking middleware,Electronics,241.34,162.74,133,59
+441,Reverse-engineered full-range attitude,Beauty,121.58,73.13,154,84
+442,Organic bandwidth-monitored moderator,Beauty,362.83,110.51,354,40
+443,Persevering 24/7 success,Books,35.75,12.42,81,61
+444,Digitized incremental projection,Books,344.61,230.63,353,25
+445,Distributed asynchronous leverage,Beauty,321.16,217.19,314,38
+446,Fundamental global process improvement,Home,113.47,40.10,232,87
+447,Team-oriented hybrid projection,Automotive,189.94,110.31,387,78
+448,Configurable full-range service-desk,Sports,401.99,253.35,348,86
+449,Public-key homogeneous functionalities,Automotive,437.20,145.48,270,100
+450,Self-enabling transitional task-force,Clothing,184.08,122.76,31,80
+451,Pre-emptive needs-based alliance,Home,451.93,172.12,84,51
+452,Secured asymmetric encoding,Sports,427.97,204.03,367,84
+453,Self-enabling systemic forecast,Automotive,246.97,162.89,414,17
+454,Focused value-added array,Automotive,229.45,115.94,288,17
+455,Optional bandwidth-monitored task-force,Books,281.60,160.26,370,12
+456,Sharable tertiary attitude,Sports,200.99,125.94,296,19
+457,Organic composite solution,Clothing,27.42,12.00,277,17
+458,Innovative 4thgeneration analyzer,Automotive,467.62,153.20,16,46
+459,Inverse analyzing frame,Toys,207.39,126.01,191,58
+460,Multi-channeled holistic Internet solution,Toys,227.03,151.39,192,20
+461,Digitized dynamic moderator,Home,342.95,193.67,334,54
+462,Open-source non-volatile software,Toys,63.72,44.42,270,26
+463,Enterprise-wide composite conglomeration,Electronics,365.29,142.13,387,12
+464,Configurable reciprocal implementation,Toys,489.35,237.43,272,58
+465,Secured systemic encoding,Beauty,412.56,164.61,79,45
+466,Proactive optimal circuit,Clothing,98.30,63.90,16,94
+467,Focused maximized productivity,Electronics,212.52,128.88,123,36
+468,Function-based logistical extranet,Automotive,38.31,20.59,306,96
+469,Synchronized 24/7 website,Electronics,353.13,112.81,205,66
+470,Persistent executive service-desk,Electronics,121.00,46.82,71,74
+471,Quality-focused cohesive archive,Beauty,496.77,195.56,295,86
+472,Organic grid-enabled parallelism,Sports,387.41,243.04,154,28
+473,Innovative scalable interface,Toys,492.92,250.65,153,45
+474,Team-oriented eco-centric knowledgebase,Home,35.17,23.89,320,96
+475,Innovative dedicated info-mediaries,Beauty,216.46,107.85,482,92
+476,Polarized bi-directional encoding,Beauty,337.31,207.22,356,63
+477,Multi-tiered object-oriented help-desk,Home,207.09,86.97,386,78
+478,Re-engineered explicit standardization,Books,239.39,153.15,439,100
+479,Implemented 3rdgeneration protocol,Electronics,76.45,37.09,287,62
+480,Object-based even-keeled access,Home,484.05,253.12,198,41
+481,Re-contextualized systemic time-frame,Clothing,131.22,56.70,472,67
+482,User-friendly actuating portal,Sports,424.33,142.99,26,44
+483,User-friendly modular forecast,Electronics,191.70,103.90,447,19
+484,Vision-oriented discrete portal,Sports,98.14,59.34,245,36
+485,Multi-channeled directional productivity,Electronics,435.39,188.60,108,34
+486,Ergonomic regional extranet,Automotive,481.23,166.95,468,41
+487,Synergistic web-enabled success,Toys,349.34,203.14,468,40
+488,Visionary stable software,Toys,278.28,169.81,238,78
+489,Devolved responsive attitude,Beauty,326.12,138.07,262,73
+490,Self-enabling secondary analyzer,Automotive,235.67,146.38,389,50
+491,Integrated zero tolerance intranet,Toys,457.59,205.13,23,82
+492,Automated optimal hierarchy,Electronics,432.72,258.12,133,80
+493,Upgradable clear-thinking array,Toys,467.71,248.66,151,29
+494,Implemented fresh-thinking synergy,Sports,102.11,40.03,255,80
+495,Operative context-sensitive customer loyalty,Books,329.03,188.84,390,72
+496,De-engineered zero tolerance moratorium,Automotive,483.42,269.11,235,31
+497,Multi-lateral multi-tasking middleware,Home,367.72,162.12,368,79
+498,Future-proofed composite extranet,Electronics,246.72,164.50,268,14
+499,Polarized explicit synergy,Electronics,420.34,138.60,391,10
+500,Mandatory bifurcated Local Area Network,Sports,209.13,133.22,34,100
