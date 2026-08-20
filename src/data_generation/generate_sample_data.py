@@ -14,6 +14,8 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
+import pandas as pd
+
 # Allow imports from this package directory when run as a script
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
@@ -24,10 +26,26 @@ from generators.products import generate_products
 from utils import create_faker, create_rng
 from validation import print_validation_report, validate_all
 
+INTEGER_CSV_COLUMNS = frozenset(
+    {
+        "customer_id",
+        "order_id",
+        "product_id",
+        "quantity",
+        "stock_quantity",
+        "reorder_level",
+    }
+)
 
-def write_csv(df, path: Path) -> None:
+
+def write_csv(df: pd.DataFrame, path: Path) -> None:
+    """Write CSV with nullable integer columns formatted as integers, not floats."""
     path.parent.mkdir(parents=True, exist_ok=True)
-    df.to_csv(path, index=False, na_rep="")
+    out = df.copy()
+    for column in out.columns:
+        if column in INTEGER_CSV_COLUMNS:
+            out[column] = pd.to_numeric(out[column], errors="coerce").astype("Int64")
+    out.to_csv(path, index=False, na_rep="")
 
 
 def main() -> int:
