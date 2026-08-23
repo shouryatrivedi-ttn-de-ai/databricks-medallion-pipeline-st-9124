@@ -47,6 +47,21 @@ SILVER_QUALITY_COLUMNS = (
     "_silver_processed_at",
 )
 
+GOLD_SCHEMA = os.getenv("GOLD_SCHEMA", "workspace.gold")
+GOLD_WRITE_MODE = os.getenv("GOLD_WRITE_MODE", "overwrite")
+GOLD_COMPLETED_ORDER_STATUS = os.getenv("GOLD_COMPLETED_ORDER_STATUS", "Completed")
+SEGMENTATION_HIGH_VALUE_THRESHOLD = float(
+    os.getenv("SEGMENTATION_HIGH_VALUE_THRESHOLD", "1000")
+)
+
+SEGMENT_TYPES = ("High-Value", "Repeat", "One-Time", "Inactive")
+
+EXPECTED_GOLD_TABLES = (
+    "sales_by_product",
+    "revenue_by_customer",
+    "customer_segmentation",
+)
+
 CSV_FILES: dict[str, str] = {
     "customers": "customers.csv",
     "orders": "orders.csv",

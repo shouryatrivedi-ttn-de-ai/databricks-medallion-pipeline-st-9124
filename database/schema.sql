@@ -43,3 +43,24 @@ CREATE SCHEMA IF NOT EXISTS workspace.silver;
 --   failed_rows    BIGINT
 --   pass_pct       DOUBLE
 --   run_timestamp  TIMESTAMP
+
+-- Gold schema setup for the medallion pipeline.
+-- Delta tables are created on first Gold run via saveAsTable.
+
+CREATE SCHEMA IF NOT EXISTS workspace.gold;
+
+-- Aggregation tables (created automatically on Gold processing):
+--   workspace.gold.sales_by_product
+--   workspace.gold.revenue_by_customer
+--   workspace.gold.customer_segmentation
+--
+-- sales_by_product columns:
+--   product_id, product_name, category,
+--   total_orders, total_revenue, avg_order_value
+--
+-- revenue_by_customer columns:
+--   customer_id, customer_name, customer_segment,
+--   total_orders, total_revenue, avg_order_value, lifetime_value_actual
+--
+-- customer_segmentation columns:
+--   segment_type, customer_count, avg_revenue, total_revenue
