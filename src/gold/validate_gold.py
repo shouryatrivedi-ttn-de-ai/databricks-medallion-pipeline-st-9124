@@ -19,7 +19,7 @@ from config import (
     SEGMENT_TYPES,
 )
 from gold.eligibility import eligible_customers, eligible_orders
-from gold.gold_utils import gold_table_name, read_silver_table, silver_table_name
+from gold.gold_utils import gold_table_name, read_silver_table
 
 logger = logging.getLogger(__name__)
 
@@ -37,6 +37,13 @@ class ValidationResult:
 
 def _gte_result(name: str, minimum: int, actual: int) -> ValidationResult:
     return ValidationResult(name=name, expected=f">= {minimum}", actual=str(actual))
+
+
+def _customer_attributed_orders(spark: SparkSession):
+    """Eligible completed orders joinable to eligible customers."""
+    orders_df = eligible_orders(read_silver_table(spark, "orders"))
+    customers_df = eligible_customers(read_silver_table(spark, "customers"))
+    return orders_df.join(customers_df, "customer_id", "inner")
 
 
 def validate_tables_exist(spark: SparkSession) -> list[ValidationResult]:
@@ -71,13 +78,22 @@ def validate_segmentation(spark: SparkSession) -> list[ValidationResult]:
         row.segment_type for row in segmentation_df.select("segment_type").distinct().collect()
     }
     invalid_labels = segment_labels - set(SEGMENT_TYPES)
-    results.append(
-        ValidationResult(
-            name="customer_segmentation.valid_labels",
-            expected=f"subset of {list(SEGMENT_TYPES)}",
-            actual="valid" if not invalid_labels else f"invalid: {sorted(invalid_labels)}",
+    if invalid_labels:
+        results.append(
+            ValidationResult(
+                name="customer_segmentation.valid_labels",
+                expected="valid",
+                actual=f"invalid: {sorted(invalid_labels)}",
+            )
         )
-    )
+    else:
+        results.append(
+            ValidationResult(
+                name="customer_segmentation.valid_labels",
+                expected="valid",
+                actual="valid",
+            )
+        )
 
     eligible_customer_count = eligible_customers(
         read_silver_table(spark, "customers")
@@ -161,14 +177,23 @@ def validate_non_negative_metrics(spark: SparkSession) -> list[ValidationResult]
 
 
 def validate_eligible_source_usage(spark: SparkSession) -> list[ValidationResult]:
-    """Confirm Gold revenue totals match eligible PASS + Completed Silver orders."""
+    """Confirm Gold totals match the correct eligible source populations."""
     results: list[ValidationResult] = []
 
     eligible_orders_df = eligible_orders(read_silver_table(spark, "orders"))
-    expected_revenue = float(
+    customer_attributed_orders_df = _customer_attributed_orders(spark)
+
+    all_eligible_revenue = float(
         eligible_orders_df.agg({"total_amount": "sum"}).collect()[0][0] or 0
     )
-    expected_order_count = eligible_orders_df.select("order_id").distinct().count()
+    all_eligible_order_count = eligible_orders_df.select("order_id").distinct().count()
+
+    customer_attributed_revenue = float(
+        customer_attributed_orders_df.agg({"total_amount": "sum"}).collect()[0][0] or 0
+    )
+    customer_attributed_order_count = (
+        customer_attributed_orders_df.select("order_id").distinct().count()
+    )
 
     sales_df = spark.table(gold_table_name("sales_by_product"))
     revenue_df = spark.table(gold_table_name("revenue_by_customer"))
@@ -186,36 +211,43 @@ def validate_eligible_source_usage(spark: SparkSession) -> list[ValidationResult
     results.append(
         ValidationResult(
             name="sales_by_product.eligible_revenue_total",
-            expected=f"{expected_revenue:.2f}",
+            expected=f"{all_eligible_revenue:.2f}",
             actual=f"{sales_revenue:.2f}",
         )
     )
     results.append(
         ValidationResult(
             name="revenue_by_customer.eligible_revenue_total",
-            expected=f"{expected_revenue:.2f}",
+            expected=f"{customer_attributed_revenue:.2f}",
             actual=f"{customer_revenue:.2f}",
         )
     )
     results.append(
         ValidationResult(
             name="customer_segmentation.eligible_revenue_total",
-            expected=f"{expected_revenue:.2f}",
+            expected=f"{customer_attributed_revenue:.2f}",
             actual=f"{segmentation_revenue:.2f}",
         )
     )
     results.append(
         ValidationResult(
             name="revenue_by_customer.eligible_order_count",
-            expected=str(expected_order_count),
+            expected=str(customer_attributed_order_count),
             actual=str(customer_order_count),
         )
     )
     results.append(
         ValidationResult(
             name="sales_by_product.eligible_order_count",
-            expected=str(expected_order_count),
+            expected=str(all_eligible_order_count),
             actual=str(sales_order_count),
+        )
+    )
+    results.append(
+        ValidationResult(
+            name="customer_segmentation.revenue_matches_revenue_by_customer",
+            expected=f"{customer_revenue:.2f}",
+            actual=f"{segmentation_revenue:.2f}",
         )
     )
 
@@ -238,6 +270,8 @@ def _result_passed(result: ValidationResult) -> bool:
     if result.name.endswith(".non_negative_metrics"):
         return result.actual == "0 invalid rows"
     if result.name.endswith(".eligible_revenue_total"):
+        return float(result.actual) == float(result.expected)
+    if result.name == "customer_segmentation.revenue_matches_revenue_by_customer":
         return float(result.actual) == float(result.expected)
     return result.passed
 
