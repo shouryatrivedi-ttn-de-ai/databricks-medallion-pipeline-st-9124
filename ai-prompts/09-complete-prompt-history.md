@@ -1,288 +1,205 @@
 # Complete Project Prompt History
 
-> Master index of all user prompts and requests across the Databricks Medallion pipeline project.  
-> Individual stage details also live in `01`–`08` where noted.
+> Master index of AI-assisted development across the Databricks Medallion pipeline project.  
+> Detailed stage documentation lives in numbered files `01`-`12`.
 
 **Repository:** `databricks-medallion-pipeline-st-9124`  
-**Last updated:** After Silver uniqueness window-function fix
+**Last updated:** After prompt-history completion and encoding review (Prompt 22)
+
+---
+
+## Numbering convention
+
+| Term | Meaning |
+|------|---------|
+| **File number** (`01`-`12`) | Prefix on `ai-prompts/*.md` stage documents |
+| **Global prompt number** (`1`-`22`) | Chronological user request sequence in this index |
+| **Verbatim** | Prompt text preserved in an earlier file or in this index from the original session |
+| **Reconstructed** | Summarized from git history, code, or development sessions; exact wording not in repo |
+
+**Note:** Global Prompt 12 in the original `09` draft meant "create this master history file." The index below extends global numbering through Prompt 22 for later phases.
 
 ---
 
 ## How to use this file
 
+This file is a **chronological index and summary**. For full detail on a stage, read the linked file.
+
 | File | Covers |
 |------|--------|
 | `01-requirements-analysis.md` | Initial requirements analysis |
 | `02-refine-requirements.md` | Silver four-check working decision |
-| `03-architecture-design.md` | CSV → Bronze → Silver → Gold design |
+| `03-architecture-design.md` | CSV -> Bronze -> Silver -> Gold design |
 | `04-sample-data-generation.md` | Sample data generator + integer CSV fix |
 | `05-bronze-layer-implementation.md` | Bronze layer code |
 | `06-bronze-layer-review-and-improvements.md` | Bronze read-path review, FAILFAST |
 | `07-bronze-databricks-execution-and-troubleshooting.md` | Databricks Bronze execution |
 | `08-git-and-databricks-troubleshooting-history.md` | Git/auth/%run troubleshooting |
-| **This file (`09`)** | Full chronological prompt history |
+| `09-complete-prompt-history.md` | **This file** - master index |
+| `10-silver-layer-implementation.md` | Silver DQ implementation + uniqueness fix |
+| `11-gold-layer-and-dashboard.md` | Gold aggregations, validation, dashboard |
+| `12-final-project-polish.md` | README, gap analysis, dashboard alignment, portfolio polish |
 
 ---
 
-## Prompt 1 — Greeting / session start
+## Chronological timeline
 
-### User request
+```
+Phase 1 - Planning (01-03)
+  Requirements analysis, Silver check interpretation, architecture design
 
-> hi / HI
+Phase 2 - Sample data (04)
+  Generator, intentional defects, integer CSV fix
 
-### Intent
+Phase 3 - Bronze (05-08)
+  Implementation, read-path review, Databricks execution, Git troubleshooting
+  Branch: feature/bronze-layer -> merged to master (PR #1)
 
-Session opener before starting implementation work.
+Phase 4 - Silver (09-11 in this file; detail in 10)
+  Analysis, implementation, uniqueness window fix
+  Branch: feature/silver-layer
 
-### Outcome
+Phase 5 - Gold (detail in 11)
+  Aggregations, eligibility, validation baseline fix
+  Branch: feature/gold-layer -> merged to master (PR #2)
 
-Assistant reviewed the assignment spec and repo, then proceeded with sample data generation when the full task was given.
+Phase 6 - Dashboard (detail in 11)
+  Initial SQL/guide, alignment with deployed four-tile dashboard
+
+Phase 7 - Portfolio polish (detail in 12)
+  Gap analysis, README rewrite, dashboard doc alignment, prompt-history completion
+  Branch: master
+```
 
 ---
 
-## Prompt 2 — Implement sample data generator
+## Phase 1-3 summary (Bronze and earlier)
 
-### User request (summary)
+Detailed prompts 1-8 are documented inline below and in files `01`-`08`.
 
-Implement sample data generation under `src/data_generation/`:
+| # | Topic | Detail file |
+|---|-------|-------------|
+| 1 | Session start | - |
+| 2 | Sample data generator | `04` |
+| 3 | Explain data generator (educational) | - |
+| 4 | Implement Bronze layer | `05` |
+| 5 | Review/fix Bronze read path | `06` |
+| 6 | Fix integer CSV export | `04` |
+| 7 | Document Bronze Databricks journey | `07`, `08` |
+| 8 | Adapt Bronze for Unity Catalog Volume | `07` |
 
-- Python + Faker/pandas, fixed random seed
-- Generate `customers.csv`, `orders.csv`, `products.csv`
-- Include intentional data-quality issues from the assignment (not clean data)
-- Self-validate defect counts after generation
-- Modular and readable
-- **Do not** implement Bronze, Silver, Gold, or dashboard yet
-- Explain files created and how to run/validate
+---
 
-### Key requirements captured
+## Phase 4 - Silver (Prompts 9-11)
 
-| Item | Value |
-|------|-------|
-| customers | 10,000 rows |
-| orders | 100,000 rows |
-| products | 500 rows |
-| Seed | 42 |
-| Defects | 50 NULL emails, 10 duplicate customer_id keys, 100 NULL customer_id, 200 NULL product_id, 50 orphan customer_id, 30 orphan product_id, 20 duplicate order_id keys |
+**Detail:** `10-silver-layer-implementation.md`
 
-### Outcome
+| # | Topic | Git / outcome |
+|---|-------|---------------|
+| 9 | Silver analysis only (no code) | Plan: four checks, flag-don't-delete, `workspace.silver` |
+| 10 | Implement Silver layer | `212ffc6` - full `src/silver/` package |
+| 11 | Fix uniqueness window function | `720ffee` - `02_quality_uniqueness.py` only |
 
-- Created `src/data_generation/` (config, generators, validation, orchestrator, notes)
-- Wrote CSVs to `data/`
-- All seven defect-count validations passed
+**Active checks:** completeness, uniqueness, type validation, referential integrity  
+**Stub (not wired):** `05_quality_business_logic.py`  
+**Validation:** `validate_silver.py` - row retention, defect minimums, quality_metrics
+
+---
+
+## Phase 5 - Gold (Prompts 12-14, reconstructed)
+
+> **Reconstructed:** Prompt summaries below are inferred from git commits and code; verbatim user prompts are not stored in the repository.
+
+**Detail:** `11-gold-layer-and-dashboard.md`
+
+| # | Topic | Git / outcome |
+|---|-------|---------------|
+| 12 | Implement Gold layer | `58ffdee` - SQL aggregations, eligibility, orchestrator |
+| 13 | Fix Gold validation baselines | `68b8bc9` - customer-attributed baselines, valid_labels fix |
+| 14 | Gold execution on Databricks | User-reported: validated (no dedicated execution doc in ai-prompts) |
+
+**Gold tables:** `sales_by_product`, `revenue_by_customer`, `customer_segmentation`  
+**Not implemented:** `03_daily_weekly_trends.sql` (optional stretch)
+
+---
+
+## Phase 6 - Dashboard (Prompts 15-18, reconstructed)
+
+> **Reconstructed:** Prompt summaries below are inferred from git commits and development sessions.
+
+**Detail:** `11-gold-layer-and-dashboard.md`
+
+| # | Topic | Git / outcome |
+|---|-------|---------------|
+| 15 | Initial dashboard SQL + guide | `27dcb37` - assignment-style three-tile queries |
+| 16 | Dashboard review and alignment | Analysis: filters required, SQL/guide mismatch with deployed UI |
+| 17 | Align dashboard_queries.sql | `f3d8519` - QUERY 1-4 for deployed four tiles |
+| 18 | Align DASHBOARD_GUIDE.md | `ae8922d` - four-tile guide |
+
+**Deployed dashboard tiles:**
+
+1. Customer Distribution by Segment (pie/donut)
+2. Total Revenue by Customer Segment (bar)
+3. Top 10 Customers by Revenue (bar)
+4. Total Revenue by Product Category (bar)
+
+---
+
+## Phase 7 - Portfolio polish (Prompts 19-22, reconstructed)
+
+> **Reconstructed:** Prompt summaries below are inferred from polish-phase development sessions.
+
+**Detail:** `12-final-project-polish.md`
+
+| # | Topic | Outcome |
+|---|-------|---------|
+| 19 | Strict gap analysis (analysis only) | ~73% mandatory completion; dashboard/docs gaps identified |
+| 20 | Portfolio README rewrite | Full README with Mermaid, all layers, dashboard |
+| 21 | Dashboard query/guide alignment | Commits `f3d8519`, `ae8922d` |
+| 22 | Complete ai-prompts history + encoding review | Files `10`, `11`, `12`; this index updated; ASCII normalization |
+
+---
+
+## Early prompts (1-8) - condensed detail
+
+### Prompt 1 - Greeting / session start
+
+Session opener before implementation work.
+
+### Prompt 2 - Implement sample data generator
+
+- 10K customers, 100K orders, 500 products, seed 42
+- Seven intentional defect types, self-validation
 - **See:** `04-sample-data-generation.md`
 
----
+### Prompt 3 - Explain data generator (educational)
 
-## Prompt 3 — Explain data generator (educational)
+Conceptual explanation only - no code changes.
 
-### User request
+### Prompt 4 - Implement Bronze layer
 
-> how do u create a data generator ? whats the core logic? explain in easy terms
-
-### Intent
-
-Conceptual explanation only — no code changes.
-
-### Outcome
-
-Plain-language explanation of:
-
-1. Set rules (counts, columns, seed)
-2. Generate parent tables first (products → customers)
-3. Generate child tables (orders) with valid FKs
-4. Inject intentional bad data
-5. Export CSV
-6. Validate defect counts
-
-Mental model: `Rules → Clean Data → Inject Defects → Export CSV → Validate`
-
----
-
-## Prompt 4 — Implement Bronze layer
-
-### User request (summary)
-
-Implement Bronze ingestion under `src/bronze/`:
-
-- Read three generated CSVs → Delta tables
-- Keep source unchanged — no clean/dedup/reject/business validation
-- Add `_ingest_timestamp`, `_source_file` only
-- Explicit schemas (preserve intentional NULLs and invalid values)
-- Modular, Databricks PySpark job ready
-- Simple validation: row counts + metadata
-- **Do not** implement Silver, Gold, or dashboard
-
-### Outcome
-
-- Created Bronze modules, `src/config.py`, `database/schema.sql`
-- Initial read path: string read + manual cast (later revised in Prompt 6)
+- Raw ingest, metadata, explicit schemas, validation
 - **See:** `05-bronze-layer-implementation.md`
 
----
+### Prompt 5 - Review and fix Bronze read path
 
-## Prompt 5 — Review and fix Bronze read path
-
-### User request (summary)
-
-Review `read_csv_raw` and `cast_to_schema`:
-
-- Bronze must not silently convert malformed values to NULL via cast
-- Simplify to direct explicit schema CSV read where possible
-- Preserve intentional NULLs, duplicates, orphan IDs
-- Remove unnecessary transformation logic
-- Keep metadata, Delta writes, ingestion log, validation unchanged
-- **Do not** implement Silver logic
-
-### Outcome
-
-- Removed string read + manual cast
-- Added direct schema read with `FAILFAST`
-- Identified pandas `2529.0` integer CSV issue (fixed in Prompt 6)
+- FAILFAST direct schema read; removed string cast path
 - **See:** `06-bronze-layer-review-and-improvements.md`
 
----
+### Prompt 6 - Fix integer CSV export
 
-## Prompt 6 — Fix integer CSV export in generator
+- pandas nullable `Int64` for integer columns in CSV output
+- **See:** `04-sample-data-generation.md`
 
-### User request (summary)
+### Prompt 7 - Document Bronze journey
 
-Before running Bronze, fix generator so integer columns write as integers (not `2529.0`):
+- Created `07`, `08`, minimal README Bronze status
+- **See:** `07-bronze-databricks-execution-and-troubleshooting.md`
 
-- **Only** CSV output formatting for nullable integer columns
-- **Do not** change row counts, defect counts, seed, or quality scenarios
-- Regenerate CSVs and re-run data-generation validation
-- **Do not** modify Bronze, Silver, Gold, or dashboard
+### Prompt 8 - Adapt Bronze for Unity Catalog Volume
 
-### Outcome
-
-- Updated `write_csv()` to use pandas nullable `Int64` before export
-- Regenerated CSVs; all defect validations passed again
-- **See:** `04-sample-data-generation.md` (follow-up section)
-
----
-
-## Prompt 7 — Document Bronze journey (prompt history + README)
-
-### User request (summary)
-
-Document complete Bronze implementation journey in `ai-prompts/`:
-
-- Create `07-bronze-databricks-execution-and-troubleshooting.md`
-- Create `08-git-and-databricks-troubleshooting-history.md`
-- Minimal README update for Bronze status
-- **Do not** modify Bronze Python code
-- **Do not** overwrite existing ai-prompts
-- Capture: Unity Catalog Volume, Databricks Git auth, `%run` failure, sys.path import fix, successful execution (500/10K/100K), validation pass, Git branch `feature/bronze-layer`, push troubleshooting
-
-### Outcome
-
-- Created prompts 07 and 08
-- Created minimal `README.md` with Bronze status
-- **See:** `07-bronze-databricks-execution-and-troubleshooting.md`, `08-git-and-databricks-troubleshooting-history.md`
-
----
-
-## Prompt 8 — Adapt Bronze for Unity Catalog Volume
-
-### User request (summary)
-
-Adapt Bronze for local + Databricks Unity Catalog Volume:
-
-1. **`src/config.py`:** Keep local `DEFAULT_DATA_PATH`, env `DATA_PATH`, default `BRONZE_SCHEMA=workspace.bronze`, do not hardcode Volume path
-2. **`resolve_csv_path()`:** Local pathlib checks; for `/Volumes/` paths return `{DATA_PATH}/{filename}` without `Path.exists()`
-3. Table naming: `workspace.bronze.customers|orders|products|ingestion_log`
-4. Check three-level Unity Catalog table name compatibility
-5. **Do not** change Bronze ingestion logic, schemas, validation, data generation
-
-### Outcome
-
-- Updated `src/config.py` (`BRONZE_SCHEMA` default → `workspace.bronze`)
-- Updated `resolve_csv_path()` Volume branch
-- Confirmed existing `f"{BRONZE_SCHEMA}.{entity}"` works for UC three-part names
-
----
-
-## Prompt 9 — Silver layer analysis only (no code)
-
-### User request (summary)
-
-On branch `feature/silver-layer`, analyze and plan Silver **without writing code**:
-
-- Inspect repo, assignment, design docs, Bronze, config, README, ai-prompts
-- Bronze complete on Databricks (`workspace.bronze.*`, 500/10K/100K rows)
-- Deliver: Silver transformations per entity, intentional defects, architecture (folder structure, modules, flagging, write strategy, UC targets), config changes, step-by-step plan
-- **Do not** modify files, write code, commit, or push
-- Stop and wait for approval
-
-### Outcome
-
-Detailed analysis and implementation plan provided covering:
-
-- Validate-and-flag (no delete/dedup/fix)
-- Four core checks + quality_metrics
-- Processing order: products → customers → orders
-- Proposed `src/silver/` structure
-- Config additions: `SILVER_SCHEMA`, `SILVER_WRITE_MODE`, `EXPECTED_MIN_FAILURE_ROWS`
-
----
-
-## Prompt 10 — Implement Silver layer
-
-### User request (summary)
-
-Implement Silver on `feature/silver-layer`:
-
-- Read `workspace.bronze.*`, write `workspace.silver.*` + `quality_metrics`
-- 100% row retention; flag with `quality_check_result`, `quality_failure_reasons`, `_silver_processed_at`
-- Checks: Completeness, Uniqueness, Type/domain, RI (orders vs Silver parents)
-- Detailed failure codes: `COMPLETENESS_EMAIL`, `COMPLETENESS_CUSTOMER_ID`, etc.
-- Add `SILVER_SCHEMA`, `SILVER_WRITE_MODE` to config
-- Modular: utilities, check modules, orchestrator, `validate_silver.py`
-- **Do not** implement business logic yet
-- **Do not** modify README or ai-prompts
-- **Do not** commit or push
-- Provide files changed, architecture, decisions, Databricks steps; stop for review
-
-### Outcome
-
-- Created full `src/silver/` package
-- Updated `src/config.py`, `database/schema.sql`
-- Bronze unchanged
-
----
-
-## Prompt 11 — Fix Silver uniqueness window function
-
-### User request (summary)
-
-Fix Databricks error `WINDOW_FUNCTION_NOT_ALLOWED_IN_CLAUSE`:
-
-- **Do not** use `df.filter(F.count("*").over(window) > 1)`
-- Materialize `_duplicate_count` column first, then `duplicate_condition = col("_duplicate_count") > 1`
-- Drop `_duplicate_count` before writing Silver table
-- Review entire Silver for other window-in-WHERE cases
-- Minimal fix; **do not** modify Bronze or Silver architecture
-
-### Outcome
-
-- **File changed:** `src/silver/02_quality_uniqueness.py` only
-- Grep confirmed no other window-in-filter usage in Silver
-
----
-
-## Prompt 12 — Master prompt history (this file)
-
-### User request
-
-> please document all my prompts , my requests in a new file in ai-prompts and capture every detail i asked u properly , like prompt history, do quickly
-
-### Intent
-
-Single comprehensive prompt-history document covering every user request in the project.
-
-### Outcome
-
-This file (`09-complete-prompt-history.md`).
+- `BRONZE_SCHEMA=workspace.bronze`, Volume path without `Path.exists()`
+- **See:** `07-bronze-databricks-execution-and-troubleshooting.md`
 
 ---
 
@@ -294,46 +211,34 @@ This file (`09-complete-prompt-history.md`).
 | Do not invent requirements | Analysis + all implementation prompts |
 | Bronze = raw ingest, no cleaning | Prompts 4, 5, 8 |
 | Silver = flag, don't delete | Prompts 9, 10 |
-| Don't commit/push unless asked | Prompts 7, 10, 12 |
-| Don't modify README/ai-prompts unless asked | Prompts 10 (Silver impl) |
-| Follow existing Bronze patterns for new layers | Prompts 8, 9, 10 |
-| Unity Catalog: `workspace.bronze`, `workspace.silver` | Prompts 8, 9, 10 |
+| Don't commit/push unless asked | Multiple prompts |
+| Don't modify pipeline code during doc-only tasks | Polish phase (12) |
+| Unity Catalog: `workspace.bronze`, `workspace.silver`, `workspace.gold` | Prompts 8-11 |
 | Volume path: `/Volumes/workspace/default/st-de-medallion-data` | Prompts 7, 8 |
 
 ---
 
-## Project timeline (high level)
+## Branches
 
-```
-01–03  Requirements + architecture (analysis only)
-04     Sample data generation (+ integer CSV fix)
-05–06  Bronze implementation + read-path review
-07–08  Bronze Databricks execution + troubleshooting docs
-08b    Unity Catalog Volume Bronze config
-09     Silver analysis (plan only)
-10     Silver implementation
-11     Silver uniqueness window fix
-12     This master prompt history
-```
+| Branch | Work | Status |
+|--------|------|--------|
+| `feature/bronze-layer` | Bronze, UC Volume, execution docs | Merged to `master` (PR #1) |
+| `feature/silver-layer` | Silver analysis, implementation, uniqueness fix | Commits on branch |
+| `feature/gold-layer` | Gold, dashboard, validation fix | Merged to `master` (PR #2) |
+| `master` | Dashboard doc alignment, README polish | Current integration branch |
 
 ---
 
-## Branches mentioned
-
-| Branch | Work |
-|--------|------|
-| `feature/bronze-layer` | Bronze implementation, UC Volume, merged to master |
-| `feature/silver-layer` | Silver analysis + implementation + uniqueness fix |
-
----
-
-## Execution environments documented
+## Execution environments
 
 | Environment | Config |
 |-------------|--------|
-| Local | `DATA_PATH=<repo>/data`, `BRONZE_SCHEMA=bronze`, `SILVER_SCHEMA=silver` |
-| Databricks | `DATA_PATH=/Volumes/workspace/default/st-de-medallion-data`, `BRONZE_SCHEMA=workspace.bronze`, `SILVER_SCHEMA=workspace.silver` |
-| Databricks notebook | `sys.path` + `from src.bronze.ingest_all import main` or `from src.silver.create_silver_tables import main` |
+| Local data gen | `python src/data_generation/generate_sample_data.py` |
+| Local Bronze | `DATA_PATH=<repo>/data`, `BRONZE_SCHEMA=bronze` |
+| Databricks | `DATA_PATH=/Volumes/workspace/default/st-de-medallion-data`, `BRONZE_SCHEMA=workspace.bronze`, `SILVER_SCHEMA=workspace.silver`, `GOLD_SCHEMA=workspace.gold` |
+| Databricks notebook | `sys.path` + `from src.<layer>.<orchestrator> import main` |
+
+**Documentation gap:** Bronze execution is fully documented in `07`. Silver and Gold Databricks execution rely on README and user-reported validation - not recreated here.
 
 ---
 
@@ -348,12 +253,28 @@ This file (`09-complete-prompt-history.md`).
 | orders | Orphan customer_id | 50 | `RI_CUSTOMER` |
 | orders | Orphan product_id | 30 | `RI_PRODUCT` |
 | orders | Duplicate order_id | 20 keys | `UNIQUENESS_ORDER_ID` |
-| products | None | 0 | — |
+| products | None | 0 | - |
+
+---
+
+## Historical gaps (honest)
+
+| Gap | Notes |
+|-----|-------|
+| Gold/Dashboard prompt wording | Reconstructed from git commits and development sessions; exact user prompt text not always in repo |
+| Silver/Gold Databricks execution logs | Not stored in ai-prompts (unlike Bronze `07`) |
+| Dashboard UI screenshots | Not in repository |
+| Assignment submission artifacts | `reflection.md`, `tool-workflow.md`, etc. not created in documented phases |
+| Prompt numbering in this file | Global prompts 12-21 cover Gold, Dashboard, and polish; original `09` draft ended at meta-Prompt 12 ("create master history") |
 
 ---
 
 ## Related documentation (not prompt history)
 
-- `docs/assignment.md` — authoritative spec
-- `design-notes.md`, `data-model.md`, `data-quality-strategy.md` — design artifacts
-- `README.md` — pipeline status and quick start
+| File | Purpose |
+|------|---------|
+| `docs/assignment.md` | Authoritative specification |
+| `README.md` | Portfolio-facing project overview |
+| `design-notes.md`, `data-model.md`, `data-quality-strategy.md` | Design artifacts |
+| `src/dashboard/DASHBOARD_GUIDE.md` | Dashboard setup |
+| `src/dashboard/dashboard_queries.sql` | QUERY 1-4 SQL |
