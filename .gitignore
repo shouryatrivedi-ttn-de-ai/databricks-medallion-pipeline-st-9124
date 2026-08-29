@@ -34,3 +34,6 @@ dist/
 
 # Databricks local artifacts
 .databricks/
+
+__pycache__/
+*.py[cod]
